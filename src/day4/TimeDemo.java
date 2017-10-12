@@ -10,15 +10,17 @@ public class TimeDemo {
 	public static void main(String[] args) {
 		LocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);
 		LocalDateTime d2 = LocalDateTime.of(2015, 5, 10, 11, 22, 33);
-		Period p = Period.ofDays(1).ofYears(2);
+		Period.ofDays(1);
+		Period p = Period.ofYears(2);
 		
 		Period p2 = Period.of(1, 2, 3);
 		
 		d = d.minus(p);
 		d2 = d2.minus(p2);
 		DateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+		DateTimeFormatter f2 = DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
 		System.out.println(f.format(d));
-		System.out.println(f.format(d2));
+		System.out.println(f2.format(d2));
 	}
 
 }
