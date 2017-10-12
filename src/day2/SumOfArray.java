@@ -10,6 +10,7 @@ public class SumOfArray {
 			sum = sum + num;
 		}
 		System.out.println("Sum of array elements is: " + sum);
+		
 	}
 
 }
